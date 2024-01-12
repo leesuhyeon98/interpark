@@ -1,0 +1,165 @@
+.shopping {
+    padding: 30px 0 60px;
+}
+.shopping .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.shopping .title h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.shopping .title p {
+    font-size: 1.8rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.shopping .slide-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+.shopping .slide-tabs li {}
+.shopping .slide-tabs li a {
+    padding: 0 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+}
+.shopping .slide-tabs li.active a {
+    background-color: #000;
+    color: #fff;
+}
+
+.shopping .slide-wrap {
+    position: relative;
+    margin-bottom: 20px;
+    display: none;
+}
+.shopping .slide-wrap.active {
+    display: block;
+}
+.shopping .slide-wrap .sw-arrow {
+    position: absolute; top: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+    width: 5rem; height: 5rem;
+    z-index: 11;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.shopping .slide-wrap .sw-arrow.swiper-button-disabled {
+    display: none;
+}
+.shopping .slide-wrap .sw-arrow::after {
+    content: "";
+    width: 10px; height: 18px;
+    background: url(../img/arrow_slider.svg) no-repeat center / cover;
+    position: absolute;
+}
+.shopping .slide-wrap .sw-prev {
+    left: -2.5rem; 
+}
+.shopping .slide-wrap .sw-prev::after {
+    transform: rotate(180deg);
+}
+.shopping .slide-wrap .sw-next {
+    right: -2.5rem;
+}
+
+.shopping .sw-shopping {}
+.shopping .sw-shopping ul {
+    align-items: center;
+}
+.shopping .sw-shopping ul li {
+    font-size: 1.5rem;
+}
+.shopping .sw-shopping ul li a {
+    display: block; overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.shopping .sw-shopping ul li a .imgbox {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+.shopping .sw-shopping ul li a .imgbox img {
+    mix-blend-mode: multiply;
+    width: 100%;
+}
+
+.shopping .sw-shopping ul li a .textbox {
+    padding: 2rem;
+}
+.shopping .sw-shopping ul li a .textbox h2 {
+    margin-bottom: 6px;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.shopping .sw-shopping ul li a .textbox h2 span {
+    font-weight: 700;
+}
+.shopping .sw-shopping ul li a .textbox h2 .ratio {
+    color: red;
+    margin-right: 2px;
+}
+/* 2줄 ...효과 */
+.shopping .sw-shopping ul li a .textbox p {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    
+    /* 1줄 ...효과 */
+    /*  overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    */
+}
+
+.shopping .sw-shopping ul li.slide-more {}
+.shopping .sw-shopping ul li.slide-more a {
+    border: none;
+    text-align: center;
+}
+.shopping .sw-shopping ul li.slide-more a img {}
+.shopping .sw-shopping ul li.slide-more a span {
+    display: block;
+    margin-top: 10px;
+}
+
+.shopping .btm-btn {
+    text-align: center;
+}
+.shopping .btm-btn a {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    padding: 0 4rem;
+    height: 55px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+}
+.shopping .btm-btn a i {
+    margin-left: 3px;
+    display: inline-flex;
+    width: 11px; height: 7px;
+    background: url(../img/arrow_down.svg) no-repeat center;
+    transform: rotate(-90deg);
+}
+
+@media screen and (max-width:1024px) {
+    .shopping .btm-btn a {
+        width: 100%;
+        border-radius: 4px;
+        justify-content: center;
+    }
+}
